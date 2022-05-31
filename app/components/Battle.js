@@ -9,13 +9,9 @@ export default function Battle () {
   const [playerTwo, setPlayerTwo] = React.useState(null);
   const [battle, setBattle] = React.useState(false);
 
-  const handleSubmit = (id, player) => {
-    id === 'playerOne' ? setPlayerOne(player) : setPlayerTwo(player)
-  }
+  const handleSubmit = (id, player) => id === 'playerOne' ? setPlayerOne(player) : setPlayerTwo(player)
 
-  const handleReset = (id) => {
-    id === 'playerOne' ? setPlayerOne(null) : setPlayerTwo(null)
-  }
+  const handleReset = (id) => id === 'playerOne' ? setPlayerOne(null) : setPlayerTwo(null)
 
   const onReset = () => {
     setPlayerOne(null);
